@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg{
+  background-color: hsl(220, 85%, 89%);
+}
+.table_header{
+  background-color: #ffddd1;
+}
+
+.btn-add{
+  background-color: #86A3C3;
+  
+}
+
+.btn-add:hover {
+  background-color: #ABCDEF;
+}
+
+.table-bg{
+ background-color: white;
+}
