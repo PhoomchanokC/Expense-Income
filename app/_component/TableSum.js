@@ -1,82 +1,46 @@
 import React from 'react'
 
-export const TableSum = () => {
-  return (
-    <>
-    {
-    <tr className='p-2'>
-        <td className='border border-black table-bg'>
+export const TableSum = (props) => {
+    const income = props.data.map((data) => parseFloat(data.income))
+    const sum_income = income.reduce(
+        (accumulator, currentValue) => accumulator + currentValue,
+    );
 
-        {!edit_status && date}
-        {
-          edit_status && <input type='date' defaultValue={date} onChange={(e)=> setDate(e.target.value)}></input>
-        }
-        </td>
+    const expense = props.data.map((data) => parseFloat(data.expense))
+    const sum_expense = expense.reduce(
+        (accumulator, currentValue) => accumulator + currentValue,
+    );
 
-        <td className='border border-black table-bg'>
-        {!edit_status && catagory}
+    const remain = props.data.map((data) => parseFloat(data.remain))
+    const sum_remain = remain.reduce(
+        (accumulator, currentValue) => accumulator + currentValue,
+    );
 
-        {
-          edit_status &&
-          <select name="category" className='' value={catagory} onChange={(e) => setCatagory(e.target.value)}>
-                        <option value="อาหาร" >อาหาร</option>
-                        <option value="เดินทาง" >เดินทาง</option>
-                        <option value="ซื้อของ" >ซื้อของ</option>
-                        <option value="อื่นๆ" >อื่นๆ</option>
-          </select>
-        }
-        </td>
-        
-        <td className='border border-black table-bg'>
-        
-        {!edit_status && 
-          <textarea
-          className='w-80 text-start resize-none'
-          defaultValue={detail}
-          readOnly
-          />
-        }
-        {
-          edit_status &&
-         <textarea
-                        className='w-80 text-start resize-none' placeholder='รายการ'
-                        value={detail}
-                        onChange={(e) => setDetail(e.target.value)}
-           />
-        }
-        </td>
-        
-        <td className='border border-black table-bg'>
 
-        {!edit_status && income}
-        {edit_status && <input type='number' name="income" className='w-10'min={0} value={income} onChange={(e) => setIncome(e.target.value)}></input>}
-        
-        </td>
-        <td className='border border-black table-bg'>
-        {!edit_status && expense}
-        {edit_status && <input type='number' className='w-10' min={0} value={expense} onChange={(e)=> setExpense(e.target.value)}></input>}
-        </td>
-        <td className='border border-black table-bg'>
-        {!edit_status && remain}
-       { edit_status && <input type='number' className='w-10' min={0} value={remain} onChange={(e)=> setRemain(e.target.value)}></input>}
-        </td>
-        { 
-        props.delete && <td className='bg'>
-        <button className='border bg-red-800 hover:bg-red-950 w-20 h-8 rounded-full text-white' onClick={delte_data}>DELETE</button>
-        </td>
-        }
-        { 
-          props.editIcon && <td className='bg'>
-          <button className='border bg-red-800 hover:bg-red-950 w-20 h-8 rounded-full text-white' onClick={cancel_edit}>{edit_status?"CANCEL":"EDIT"}</button>
-          </td>
-        }
-                    { 
-          edit_status && <td className='bg'>
-          <button className='border bg-green-800 hover:bg-green-950 w-20 h-8 rounded-full text-white' onClick={done_edit}>DONE</button>
-          </td>
-        }
-    </tr>
-    }
-</>
-  )
+    return (
+        <>
+            {
+                <tr className='p-2'>
+                    <td></td>
+                    <td></td>
+                    <td className='text-end text-xl border-r border-black flex justify-end '><h1 className='border-black  bg-white border-l px-5 border-b py-1'>รวม</h1></td>
+                    <td className='px-5 text-lg border-r border-b border-black bg-white text-orange-500'>
+                        {
+                            sum_income
+                        }
+                    </td>
+                    <td className='px-5 text-lg border border-black bg-white text-orange-500'>
+                        {
+                            sum_expense
+                        }
+                    </td>
+                    <td className='px-5 text-lg border border-black bg-white text-orange-500'>
+                        {
+                            sum_remain
+                        }
+                    </td>
+                </tr>
+            }
+        </>
+    )
 }

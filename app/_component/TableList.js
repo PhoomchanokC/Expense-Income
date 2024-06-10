@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { TableItem } from './TableItem'
 import { TableAdd } from './TableAdd'
+import { TableSum } from './TableSum'
 
 
 export const TableList = (props) => {
@@ -25,6 +26,7 @@ export const TableList = (props) => {
   return (
     <div className='container mx-auto px-20'>
     <div className='flex justify-end '>
+
     {
         !deleteItem && !newItem?
       <button className={ !newItem?"bg-yellow-600 hover:bg-yellow-9000 text-white font-bold py-1 px-3 rounded-md mx-2":"bg-red-900 hover:bg-red-950 text-white font-bold py-1 px-3 rounded-md"} onClick={Icon_EditItem}>
@@ -102,9 +104,13 @@ export const TableList = (props) => {
             {
               newItem && <TableAdd insertItem={props.insertItem} cancel={Icon_addItem}/>
             }
-            {
+              {props.selectFilter === "All"?
+                <TableSum data={data}/>:
+                <TableSum data={data.filter((data) => data.catagory === props.selectFilter)}/>
+                
               
             }
+          
           </tbody>
         </table>
         </div>

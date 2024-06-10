@@ -86,7 +86,8 @@ export default function Home() {
   return (
       <div className="container min-h-screen bg min-w-full">
         <Header/>
-        <div>
+        <div className="mx-auto px-20 pt-5 flex">
+          <h1>เลือกโดย : </h1> 
         <select name="category" className=''  onChange={(e) => setSelectFilter(e.target.value)}>
             <option value="All" >ทั้งหมด</option>
             <option value="อาหาร" >อาหาร</option>
