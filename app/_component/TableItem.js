@@ -27,7 +27,6 @@ export const TableItem = (props) => {
   setDetail(props.detail)
   setIncome(props.income)
   setExpense(props.expense)
-  setCatagory(remain.remain)
  }
 
  const done_edit = ()=>{
@@ -41,9 +40,9 @@ export const TableItem = (props) => {
     expense,
     remain
   }
+  console.log(edit_item)
   props.editItemHandler(edit_item)
  }
-
 
   return (
     <>
