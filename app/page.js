@@ -13,36 +13,36 @@ export const sarabun = Anuphan({
 const sampledata = [
   {
     key:1,
-    date: "12/01/2024",
-    catagory: "01",
-    detail: "ABCD",
+    date: "2024-06-02",
+    catagory: "อาหาร",
+    detail: "example 1",
     income: 100,
     expense: 0,
     remain: 100
   },
   {
     key:2,
-    date: "12/01/2024",
-    catagory: "02",
-    detail: "EFG",
+    date: "2024-06-03",
+    catagory: "เดินทาง",
+    detail: "example 2",
     income: 0,
     expense: 100,
     remain: 0
   },
   {
     key:3,
-    date: "13/01/2024",
-    catagory: "03",
-    detail: "HIddsdsaouhhfawkjdfhasdfadshflkhfdslkfjheaiuwgfblhijbSDEHJBvSLJBVDJLdsdsdJ",
+    date: "2024-06-04",
+    catagory: "ซื้อของ",
+    detail: "example 4",
     income: 200,
     expense: 0,
     remain: 200
   },
   {
     key:4,
-    date: "15/01/2024",
-    catagory: "04",
-    detail: "KLM",
+    date: "2024-06-05",
+    catagory: "อื่นๆ",
+    detail: "example 5",
     income: 20,
     expense: 0,
     remain: 100

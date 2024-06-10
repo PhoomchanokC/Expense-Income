@@ -5,7 +5,7 @@ import { TableAdd } from './TableAdd'
 
 
 export const TableList = (props) => {
-  const data = props.data;
+  const data = props.data || [];
   const [newItem,setnewItem] = useState(false);
   const [deleteItem,setDeleteItem] = useState(false);
   const [editIcon,setEditIcon] = useState(false)
