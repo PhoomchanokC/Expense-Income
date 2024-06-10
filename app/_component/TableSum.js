@@ -4,17 +4,17 @@ export const TableSum = (props) => {
     const income = props.data.map((data) => parseFloat(data.income))
     const sum_income = income.reduce(
         (accumulator, currentValue) => accumulator + currentValue,
-    );
+    ) || 0;
 
     const expense = props.data.map((data) => parseFloat(data.expense))
     const sum_expense = expense.reduce(
         (accumulator, currentValue) => accumulator + currentValue,
-    );
+    ) || 0;
 
     const remain = props.data.map((data) => parseFloat(data.remain))
     const sum_remain = remain.reduce(
         (accumulator, currentValue) => accumulator + currentValue,
-    );
+    ) || 0;
 
 
     return (
