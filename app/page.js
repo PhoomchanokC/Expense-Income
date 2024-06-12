@@ -2,7 +2,7 @@
 import Table from "./home/page";
 import { Anuphan, Roboto_Mono } from 'next/font/google'
 import { Header } from "./_component/header";
-import sampledata from "@/app/data/data"
+import sampledata from "../app/data/data"
 import { useState } from "react";
 
 export const sarabun = Anuphan({
