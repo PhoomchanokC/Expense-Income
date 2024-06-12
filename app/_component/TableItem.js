@@ -101,7 +101,13 @@ export const TableItem = (props) => {
             </td>
             <td className='border border-black table-bg'>
             {!edit_status && remain}
-           { edit_status && <input type='number' className='w-10' min={0} value={remain} onChange={(e)=> setRemain(e.target.value)}></input>}
+           { edit_status &&  <td className='border border-black table-bg' >
+                        <select name="category" className='' value={remain} onChange={(e)=> setRemain(e.target.value)}>
+                            <option value="เงินสด" >เงินสด</option>
+                            <option value="บัตรเคดิต" >บัตรเคดิต</option>
+                            <option value="อื่นๆ" >อื่นๆ</option>
+                        </select>
+                    </td>}
             </td>
             { 
             props.delete && <td className='bg'>

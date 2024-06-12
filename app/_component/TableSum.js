@@ -4,30 +4,27 @@ export const TableSum = (props) => {
     const income = props.data.map((data) => parseFloat(data.income)) || [0]
     const expense = props.data.map((data) => parseFloat(data.expense)) || [0]
     const remain = props.data.map((data) => parseFloat(data.remain)) || [0]
-    
+
     let sum_income = 0;
     let sum_expense = 0;
-    let sum_remain = 0; 
-    try{
-    sum_income = income.reduce(
-        (accumulator, currentValue) => accumulator + currentValue,
-    ) ;
-    sum_expense = expense.reduce(
-        (accumulator, currentValue) => accumulator + currentValue,
-    );
-    sum_remain = remain.reduce(
-        (accumulator, currentValue) => accumulator + currentValue,
-    );
+
+    try {
+        sum_income = income.reduce(
+            (accumulator, currentValue) => accumulator + currentValue,
+        );
+        sum_expense = expense.reduce(
+            (accumulator, currentValue) => accumulator + currentValue,
+        );
     }
-    catch(err){
-    
+    catch (err) {
+
     }
 
-   
-   
 
-   
-    
+
+
+
+
 
     return (
         <>
@@ -48,7 +45,7 @@ export const TableSum = (props) => {
                     </td>
                     <td className='px-5 text-lg border border-black bg-white text-orange-500'>
                         {
-                            sum_remain
+                            sum_income - sum_expense
                         }
                     </td>
                 </tr>

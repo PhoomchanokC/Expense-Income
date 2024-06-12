@@ -51,7 +51,13 @@ export const TableAdd = (props) => {
                         <input type='number' className='w-10' min={0} value={expense} onChange={(e)=> setExpense(e.target.value)}></input>
                     </td>
                     <td className='border border-black table-bg'>
-                        <input type='number' className='w-10' min={0} value={remain} onChange={(e)=> setRemain(e.target.value)}></input>
+                    <td className='border border-black table-bg' >
+                        <select name="category" className='' value={remain} onChange={(e)=> setRemain(e.target.value)}>
+                            <option value="เงินสด" >เงินสด</option>
+                            <option value="บัตรเคดิต" >บัตรเคดิต</option>
+                            <option value="อื่นๆ" >อื่นๆ</option>
+                        </select>
+                    </td>
                     </td>
                     <td className='bg '>
                         <button className='border bg-lime-700  w-20 h-8 rounded-full text-white' onClick={finish}>DONE</button>

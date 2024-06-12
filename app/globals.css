@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .bg{
-  background-color: hsl(220, 85%, 89%);
+  background-image: url("../public/bg.png");
 }
 .table_header{
   background-color: #ffddd1;

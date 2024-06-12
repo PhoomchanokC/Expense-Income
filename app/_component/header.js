@@ -15,8 +15,8 @@ export const Header = () => {
     const [month,setMonth] = useState( new Date().toLocaleString('default', { month: 'long' }));
     const [year,setYear] = useState(new Date().getFullYear())
     return (
-        <div className='container mx-auto flex px-20 pt-10 justify-between'>
-            <div className='text-4xl '>
+        <div className='container mx-auto flex pt-10 justify-between'>
+            <div className='text-5xl '>
                 <h1 className={dancing_script.className}>
                     EXPENSE
                 </h1>
@@ -24,10 +24,10 @@ export const Header = () => {
                     TRACKER
                 </h1>
             </div>
-            <div className='flex  items-center'>
-                <div className={hind.className + 'text-lg'}>
-                    <h1 className={hind.className}> MONTH: {month}</h1>
-                    <h1 className={hind.className} > YEAR: {year} </h1>
+            <div className='flex  items-center relative'>
+                <div className={'text-2xl'}>
+                    <h1 className={hind.className + " flex "}> MONTH: <div className='underline '>{month}</div> </h1>
+                    <h1 className={hind.className + " flex"} > YEAR: <div className='underline '>{year} </div> </h1>
                 </div>
             </div>
         </div>

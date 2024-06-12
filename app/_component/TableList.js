@@ -55,7 +55,7 @@ export const TableList = (props) => {
               <th className='border border-black'>รายการ</th>
               <th className='border border-black'>รายรับ</th>
               <th className='border border-black'>รายจ่าย</th>
-              <th className='border border-black'>คงเหลือ</th>
+              <th className='border border-black'>วิธีการชำระ</th>
               {
                 newItem && <th className='bg'></th>
               }
