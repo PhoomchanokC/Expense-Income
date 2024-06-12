@@ -2,13 +2,53 @@
 import Table from "./home/page";
 import { Anuphan, Roboto_Mono } from 'next/font/google'
 import { Header } from "./_component/header";
-import sampledata from "../app/data/data"
 import { useState } from "react";
 
 export const sarabun = Anuphan({
   subsets: ['thai'],
   weight: '700',
 })
+
+
+const sampledata = [
+  {
+    key: 1,
+    date: "2024-06-02",
+    catagory: "อาหาร",
+    detail: "example 1",
+    income: 100,
+    expense: 0,
+    remain: "อื่นๆ"
+  },
+  {
+    key: 2,
+    date: "2024-06-03",
+    catagory: "เดินทาง",
+    detail: "example 2",
+    income: 0,
+    expense: 100,
+    remain: "บัตรเคดิต"
+  },
+  {
+    key: 3,
+    date: "2024-06-04",
+    catagory: "ซื้อของ",
+    detail: "example 4",
+    income: 200,
+    expense: 0,
+    remain: "บัตรเคดิต"
+  },
+  {
+    key: 4,
+    date: "2024-06-05",
+    catagory: "อื่นๆ",
+    detail: "example 5",
+    income: 20,
+    expense: 0,
+    remain: "เงินสด"
+  }
+]
+
 
 
 
