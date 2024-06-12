@@ -2,6 +2,7 @@
 import Table from "./home/page";
 import { Anuphan, Roboto_Mono } from 'next/font/google'
 import { Header } from "./_component/header";
+import { Footer } from "./_component/footer";
 import { useState } from "react";
 
 export const sarabun = Anuphan({
@@ -101,6 +102,7 @@ export default function Home() {
           <Table data={data} insertItem={insertItemHandler} removeItemHandler={removeItemHandler} editItemHandler={editItemHandler} selectFilter={selectFilter} />
         }
       </div>
+    
     </div>
   );
 }
